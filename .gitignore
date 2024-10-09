@@ -1,0 +1,53 @@
+# 依赖目录
+/node_modules
+.history
+
+# 编译输出目录
+/dist
+/build
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 测试覆盖率目录
+/coverage
+
+# IDE / 编辑器文件
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# TypeScript 缓存
+*.tsbuildinfo
+
+# 可选: 如果您使用 yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# 项目特定文件
+/babel/output.ts
+/babel/generatedApi.ts
+/babel/ast.json
+/babel/docsList.json
+

@@ -1,0 +1,38 @@
+{
+  "name": "api-docs-ts-converter",
+  "version": "0.0.1",
+  "description": "A tool for bidirectional conversion between API documentation and TypeScript functions using Babel",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/parser": "^7.25.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/generator": "^7.14.5",
+    "@babel/helper-module-imports": "^7.14.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-typescript": "^7.14.5",
+    "@babel/template": "^7.14.5",
+    "@babel/traverse": "^7.14.7",
+    "@babel/types": "^7.14.5",
+    "axios": "^0.21.1",
+    "babel-plugin-tester": "^10.1.0",
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "babel": "node babel/index.js",
+    "prebuild": "tsc",
+    "build": "babel src --out-dir src --extensions \".ts,.tsx\"",
+    "postbuild": "node babel/index.js",
+    "check-type": "tsc --watch",
+    "generate-docs": "node babel/jsonToApi.js",
+    "generate-api": "node babel/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
